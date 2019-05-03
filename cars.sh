@@ -2,6 +2,8 @@
 #Cars.sh
 #Joshua Barrs
 
+echo "" #for formatting 
+
 echo "This program has to do with cars!" 
 
 echo "Hit q at any time to quit the program!"
@@ -20,7 +22,7 @@ do
 			read car_make
 			echo "Please enter the model of the car" 
 			read car_model
-			echo "$car_year:$car_make:$car_model" >> My_old_cars;;
+			echo "$car_year $car_make $car_model" >> My_old_cars;;
 		"p")
 			echo "Printing the current inventory of cars"
 			cat My_old_cars;;   
@@ -30,11 +32,13 @@ do
 	esac
 	if [ $option != "q" ]
 	then
+		echo "" #formatting 
 		echo "Re-enter a option: q to quit, e to enter a new car into the file, or p to print the current inventory"
 		read option
 		if [ $option == "q" ] 
 		then
 			echo "Goodbye"
+			echo "" # for formatting 
 		fi  
 	fi 
 done
