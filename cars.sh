@@ -25,7 +25,7 @@ do
 			echo "$car_year $car_make $car_model" >> My_old_cars;;
 		"p")
 			echo "Printing the current inventory of cars"
-			cat My_old_cars;;   
+			sort My_old_cars;;   
 		"q") 
 			echo "Goodbye!"
 			
